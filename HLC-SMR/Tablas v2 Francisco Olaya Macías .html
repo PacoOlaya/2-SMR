@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aceptar = true;
+        let cancelar;
+        let tablas = parseInt(prompt('¿Cuantas tablas quieres?'));
+        let numero = -1;
+        let factos;
+        let x = 0;
+            if(aceptar){
+                    while(x <= tablas){
+                        numero++;
+                        x++;
+                            document.write('<h1>Tabla del ' +numero+ '</h1>')
+                        for(factos = 1; factos <= 10;factos++){
+                            document.write(numero+ ' x ' +factos+ ' = ' +(factos*numero));
+                            document.write("<br>");
+                        }
+            }
+
+        }
+            
+        
+        
+        
+    </script>
+</body>
+</html>

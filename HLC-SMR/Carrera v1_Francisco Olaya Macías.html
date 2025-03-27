@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let rejugar = true
+    while(rejugar){
+        let jugador1 = 0;
+        let jugador2 = 0;
+        let MaxPuntos = parseInt(prompt('¿A cuantos puntos vamos a jugar?'));
+        let aceptar = true
+        let cancelar;
+        let rondas = 0;
+        if (MaxPuntos >= 1) {
+                let eleccion = parseInt(prompt('¿Quien empieza? jugador-->1  pc--->2'));
+                        while(aceptar){
+                            rondas++
+                            if (eleccion === 1) {
+                                jugador1 += Math.floor(Math.random() * 6) + 1;;
+                                alert('Jugador 1 tiene ' + jugador1 + ' puntos en la ronda '+ rondas);
+                                jugador2 += Math.floor(Math.random() * 6) + 1;
+                                alert('Jugador 2 tiene ' + jugador2 + ' puntos en la ronda '+ rondas);
+                            } else if (eleccion === 2) {
+                                jugador2 += Math.floor(Math.random() * 6) + 1;;
+                                alert('Jugador 2 tiene ' + jugador2 + ' puntos en la ronda '+ rondas);
+                                jugador1 += Math.floor(Math.random() * 6) + 1;
+                                alert('Jugador 1 tiene ' + jugador1 + ' puntos en la ronda '+ rondas);
+                            } else {
+                                alert('Te has arrepentido cobarde');
+                                break;
+                            }
+
+                            if (jugador1 >= MaxPuntos) {
+                                alert('Jugador 1 ha ganado con ' + jugador1 + ' ha jugado ' +rondas+ ' rondas' );
+                                alert('Jugador 2 ha perdido con ' + jugador2 + ' ha jugado ' +rondas+ ' rondas');
+                                aceptar = false;
+                            } else if (jugador2 >= MaxPuntos) {
+                                alert('Jugador 2 ha ganado con ' + jugador2 + ' ha jugado ' +rondas+ ' rondas');
+                                alert('Jugador 1 ha perdido con ' + jugador1 + ' ha jugado ' +rondas+ ' rondas');
+                                aceptar = false;
+                            }
+                            
+                        }
+                    } else {
+                        alert('Veo que te has arrepentido...');
+                        aceptar = false;
+        }
+        rejugar = confirm('¿Quieres volver a jugar?');
+            if (!rejugar) {
+                alert('Gracias por jugar.');
+            }
+    }
+        
+        
+   
+        
+    
+            
+    </script>
+</body>
+</html>
